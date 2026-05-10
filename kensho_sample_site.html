@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>整体院 〜健勝〜 | 守口市の整体・骨格矯正</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #1e3a2f;
+  --forest-mid: #2d5a42;
+  --forest-light: #3d7a58;
+  --cream: #f5f0e8;
+  --cream-dark: #ede6d6;
+  --gold: #b8935a;
+  --gold-light: #d4b483;
+  --text: #2a2018;
+  --text-light: #6b5d4f;
+  --white: #fdfaf5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(30, 58, 47, 0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(184, 147, 90, 0.3);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+}
+
+.nav-logo {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 18px;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold);
+}
+
+.nav-instagram {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  border: 1px solid rgba(184,147,90,0.5);
+  padding: 7px 14px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.nav-instagram:hover {
+  background: rgba(184,147,90,0.15);
+  border-color: var(--gold);
+}
+
+.nav-instagram svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--gold-light);
+}
+
+/* スクロール進行バー */
+.nav-progress {
+  height: 2px;
+  background: rgba(255,255,255,0.06);
+  position: relative;
+}
+
+.nav-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--forest-light), var(--gold));
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  background: var(--forest);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 48px 80px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(61,122,88,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(184,147,90,0.1) 0%, transparent 60%);
+}
+
+.hero-bg-text {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(120px, 18vw, 260px);
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  border: 1px solid rgba(184,147,90,0.4);
+  padding: 6px 16px;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  color: var(--white);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+
+.hero p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 2;
+  max-width: 480px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.45s ease both;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--forest);
+  padding: 16px 36px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 16px 36px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.btn-outline:hover { border-color: var(--gold); background: rgba(184,147,90,0.1); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  letter-spacing: 3px;
+  animation: fadeUp 1s 0.8s ease both;
+}
+
+.hero-scroll::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.2);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); opacity: 0.4; }
+  50% { transform: scaleY(0.5); opacity: 1; }
+}
+
+/* ===== ABOUT ===== */
+.about {
+  padding: 120px 48px;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-block {
+  background: var(--forest);
+  aspect-ratio: 3/4;
+  max-width: 400px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(61,122,88,0.6) 0%, transparent 60%);
+}
+
+.about-block-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 48px;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+}
+
+.about-accent {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--gold);
+  opacity: 0.4;
+}
+
+.about-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.about h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 32px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  color: var(--forest);
+}
+
+.about p {
+  font-size: 14px;
+  line-height: 2.2;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--cream-dark);
+}
+
+.stat-item { text-align: center; }
+
+.stat-num {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 40px;
+  color: var(--forest);
+  display: block;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  margin-top: 8px;
+  display: block;
+}
+
+/* ===== MENU ===== */
+.menu {
+  padding: 120px 48px;
+  background: var(--cream);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.section-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 36px;
+  color: var(--forest);
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 2;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  background: var(--white);
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover { transform: translateY(-4px); }
+
+.menu-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover::after { transform: scaleX(1); }
+
+.menu-number {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 56px;
+  color: var(--cream-dark);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.menu-card h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 20px;
+  color: var(--forest);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.menu-card p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 2;
+  margin-bottom: 24px;
+}
+
+.menu-price {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 24px;
+  color: var(--gold);
+}
+
+.menu-price span {
+  font-size: 13px;
+  color: var(--text-light);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+/* ===== VOICE ===== */
+.voice {
+  padding: 120px 48px;
+  background: var(--forest);
+  position: relative;
+  overflow: hidden;
+}
+
+.voice::before {
+  content: '"';
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 320px;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.voice .section-tag { color: var(--gold-light); }
+.voice .section-header h2 { color: var(--white); }
+.voice .section-header p { color: rgba(255,255,255,0.6); }
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.voice-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 36px;
+  position: relative;
+}
+
+.voice-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 36px;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.voice-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2.2;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.voice-meta {
+  font-size: 12px;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+/* ===== FLOW ===== */
+.flow {
+  padding: 120px 48px;
+  background: var(--white);
+}
+
+.flow-steps {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flow-steps::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: var(--cream-dark);
+}
+
+.flow-step {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.flow-step:last-child { margin-bottom: 0; }
+
+.step-num {
+  width: 56px;
+  height: 56px;
+  background: var(--forest);
+  color: var(--gold-light);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.step-content h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 20px;
+  color: var(--forest);
+  margin-bottom: 10px;
+  padding-top: 12px;
+}
+
+.step-content p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 2;
+}
+
+/* ===== ACCESS ===== */
+.access {
+  padding: 120px 48px;
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.access h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 32px;
+  color: var(--forest);
+  margin-bottom: 40px;
+}
+
+.access-info {
+  list-style: none;
+}
+
+.access-info li {
+  display: flex;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--cream-dark);
+  font-size: 14px;
+}
+
+.access-info li:last-child { border-bottom: none; }
+
+.access-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  min-width: 60px;
+  padding-top: 2px;
+}
+
+.map-placeholder {
+  background: var(--forest);
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+  letter-spacing: 2px;
+  gap: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.map-icon {
+  font-size: 32px;
+  opacity: 0.3;
+}
+
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  padding: 100px 48px;
+  background: var(--gold);
+  text-align: center;
+}
+
+.cta-banner h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 36px;
+  color: var(--forest);
+  margin-bottom: 16px;
+}
+
+.cta-banner p {
+  font-size: 15px;
+  color: rgba(30,58,47,0.8);
+  margin-bottom: 40px;
+  line-height: 2;
+}
+
+.btn-dark {
+  background: var(--forest);
+  color: var(--gold-light);
+  padding: 18px 48px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.btn-dark:hover { opacity: 0.85; transform: translateY(-2px); }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--forest);
+  padding: 60px 48px 32px;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+}
+
+.footer-tagline {
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .nav-inner { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .nav-instagram span { display: none; }
+  .hero { padding: 100px 24px 60px; }
+  .hero h1 { font-size: 36px; }
+  .about { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
+  .about-visual { display: none; }
+  .menu { padding: 80px 24px; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .voice { padding: 80px 24px; }
+  .voice-grid { grid-template-columns: 1fr; }
+  .flow { padding: 80px 24px; }
+  .access { grid-template-columns: 1fr; padding: 80px 24px; gap: 40px; }
+  .cta-banner { padding: 80px 24px; }
+  footer { padding: 48px 24px 24px; }
+  .footer-top { flex-direction: column; gap: 32px; }
+  .footer-links { flex-wrap: wrap; gap: 16px; }
+  .about-stats { gap: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">健 勝</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-nav="about">院について</a></li>
+        <li><a href="#menu" data-nav="menu">メニュー</a></li>
+        <li><a href="#voice" data-nav="voice">お客様の声</a></li>
+        <li><a href="#flow" data-nav="flow">施術の流れ</a></li>
+        <li><a href="#access" data-nav="access">アクセス</a></li>
+        <li><a href="#contact" data-nav="contact">ご予約</a></li>
+      </ul>
+      <a href="https://www.instagram.com/" target="_blank" class="nav-instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </div>
+  </div>
+  <div class="nav-progress">
+    <div class="nav-progress-bar" id="progressBar"></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-text">健勝</div>
+  <div class="hero-content">
+    <div class="hero-label">SEITAI — MORIGUCHI, OSAKA</div>
+    <h1>
+      その痛み、<br>
+      <em>諦めなくて</em><br>
+      よかった。
+    </h1>
+    <p>
+      長年の肩こり・腰痛・身体の歪み。<br>
+      「もう一生このまま」と感じていた方が、<br>
+      整体院〜健勝〜で変わっています。<br>
+      骨格分析から始まる、あなただけの施術。
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">無料相談・ご予約</a>
+      <a href="#menu" class="btn-outline">メニューを見る</a>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <div class="about-block">
+      <div class="about-block-text">健勝</div>
+    </div>
+    <div class="about-accent"></div>
+  </div>
+  <div class="about-text">
+    <span class="about-tag">ABOUT — 健勝について</span>
+    <h2>身体の声を、<br>丁寧に聞くことから<br>始めます。</h2>
+    <p>
+      整体院〜健勝〜は、守口市で「根本から改善する」整体院です。
+      単に症状を和らげるだけでなく、なぜその痛みが起きているのかを
+      骨格分析とカウンセリングで丁寧に紐解きます。
+    </p>
+    <p>
+      初回施術後から「身体が軽い」「よく眠れた」という声を多くいただいています。
+      学生・デスクワーカー・産後のお母さんまで、幅広い方がご来院されています。
+    </p>
+    <div class="about-stats">
+      <div class="stat-item">
+        <span class="stat-num">4.9</span>
+        <span class="stat-label">Google評価</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">42+</span>
+        <span class="stat-label">口コミ件数</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">初回</span>
+        <span class="stat-label">から実感</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="section-header reveal">
+    <span class="section-tag">MENU — 施術メニュー</span>
+    <h2>あなたの悩みに合わせた<br>オーダーメイドの施術</h2>
+    <p>すべての施術は丁寧なカウンセリングからスタートします</p>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card reveal">
+      <div class="menu-number">01</div>
+      <h3>骨格矯正・姿勢改善</h3>
+      <p>長年の姿勢の歪みを骨格レベルから整えます。猫背・巻き肩・骨盤の傾きにアプローチ。</p>
+      <div class="menu-price">¥5,500 <span>〜 / 60分</span></div>
+    </div>
+    <div class="menu-card reveal">
+      <div class="menu-number">02</div>
+      <h3>肩こり・首こり集中整体</h3>
+      <p>デスクワークやスマホ首による慢性的なコリを根本から解消。頭痛の改善にも効果的です。</p>
+      <div class="menu-price">¥4,500 <span>〜 / 50分</span></div>
+    </div>
+    <div class="menu-card reveal">
+      <div class="menu-number">03</div>
+      <h3>腰痛・坐骨神経痛改善</h3>
+      <p>「一生このままかも」と思っていた腰の悩みに。神経・筋膜・骨格への複合アプローチ。</p>
+      <div class="menu-price">¥5,500 <span>〜 / 60分</span></div>
+    </div>
+    <div class="menu-card reveal">
+      <div class="menu-number">04</div>
+      <h3>産後骨盤矯正</h3>
+      <p>出産後の骨盤の開きや歪みを整え、体型の戻りをサポート。お子様連れでも安心。</p>
+      <div class="menu-price">¥5,000 <span>〜 / 55分</span></div>
+    </div>
+    <div class="menu-card reveal">
+      <div class="menu-number">05</div>
+      <h3>全身オーダーメイド整体</h3>
+      <p>初回カウンセリングと骨格分析に基づき、あなただけの施術プランを組み立てます。</p>
+      <div class="menu-price">¥6,600 <span>〜 / 70分</span></div>
+    </div>
+    <div class="menu-card reveal">
+      <div class="menu-number">06</div>
+      <h3>定期メンテナンス</h3>
+      <p>月1〜2回の定期ケアで、良い状態を長く維持。リピーターの方に人気のプランです。</p>
+      <div class="menu-price">¥4,000 <span>〜 / 45分</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice" id="voice">
+  <div class="section-header reveal">
+    <span class="section-tag">VOICE — お客様の声</span>
+    <h2 style="color:white;">来てよかった、の声が<br>私たちの原動力です。</h2>
+    <p>実際にご来院いただいたお客様のリアルな声をご紹介します</p>
+  </div>
+  <div class="voice-grid">
+    <div class="voice-card reveal">
+      <p class="voice-text">
+        「左のお尻からつま先にかけてしびれがあり、病院では手術しかないと言われていました。健勝さんに通い始めてから、お尻のしびれが消え、今では足先だけ少し残る程度に。本当に驚いています。」
+      </p>
+      <div class="voice-meta">30代 女性 / 坐骨神経痛</div>
+    </div>
+    <div class="voice-card reveal">
+      <p class="voice-text">
+        「タブレットで骨格の歪みを分析してもらい、自分の身体の状態が一目でわかりました。施術後は首の可動域が広がり、身体がすごく軽くなって感動しました。」
+      </p>
+      <div class="voice-meta">20代 学生 / 肩こり・ストレートネック</div>
+    </div>
+    <div class="voice-card reveal">
+      <p class="voice-text">
+        「産後骨盤矯正でお世話になっています。2回目の施術後から、ズボンがスムーズに履けるようになりました。丁寧な説明で安心して任せられます。」
+      </p>
+      <div class="voice-meta">30代 女性 / 産後骨盤矯正</div>
+    </div>
+    <div class="voice-card reveal">
+      <p class="voice-text">
+        「Instagramを見て初めて来院しました。施術前のカウンセリングがとても丁寧で、自分の身体のことを初めてちゃんと理解できた気がします。また来ます。」
+      </p>
+      <div class="voice-meta">40代 男性 / 腰痛・肩こり</div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow" id="flow">
+  <div class="section-header reveal">
+    <span class="section-tag">FLOW — 施術の流れ</span>
+    <h2>初めての方も安心の<br>4ステップ</h2>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3>カウンセリング</h3>
+        <p>今の症状・お悩み・生活習慣を丁寧にヒアリングします。「どこが・いつから・どんなふうに痛むか」を一緒に整理します。</p>
+      </div>
+    </div>
+    <div class="flow-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3>骨格分析・姿勢チェック</h3>
+        <p>タブレットを使用した骨格分析で、身体の歪みを可視化。痛みの根本原因をご説明します。</p>
+      </div>
+    </div>
+    <div class="flow-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3>オーダーメイド施術</h3>
+        <p>分析結果に基づき、あなたの身体に最適な施術を実施。ソフトな手技で安全・丁寧に施術します。</p>
+      </div>
+    </div>
+    <div class="flow-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3>アフターケア・ホームケア指導</h3>
+        <p>施術後の身体の変化をご説明し、自宅でできるセルフケアをお伝えします。次回プランもご提案。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="access" id="access">
+  <div>
+    <h2>アクセス</h2>
+    <ul class="access-info">
+      <li>
+        <span class="access-label">住所</span>
+        <span>大阪府守口市金下町2丁目3-3<br>ビアリッツ守口 307号</span>
+      </li>
+      <li>
+        <span class="access-label">電話</span>
+        <span>090-4231-3778</span>
+      </li>
+      <li>
+        <span class="access-label">営業時間</span>
+        <span>9:30 〜 18:30（年中無休）</span>
+      </li>
+      <li>
+        <span class="access-label">アクセス</span>
+        <span>京阪「守口市駅」より徒歩約7分</span>
+      </li>
+      <li>
+        <span class="access-label">予約</span>
+        <span>完全予約制 / お電話・InstagramDMにて受付</span>
+      </li>
+    </ul>
+  </div>
+  <div class="map-placeholder">
+    <div class="map-icon">📍</div>
+    <div>Googleマップを埋め込み予定</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner" id="contact">
+  <h2>まず、ご相談だけでも<br>お気軽にどうぞ。</h2>
+  <p>
+    「本当に治るかな」という不安な気持ち、よくわかります。<br>
+    初回カウンセリングは無料。まずはお話を聞かせてください。
+  </p>
+  <a href="tel:090-4231-3778" class="btn-dark">電話でご予約 ▶︎ 090-4231-3778</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">整体院 〜健勝〜</div>
+      <div class="footer-tagline">守口市の整体・骨格矯正専門院</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#about">院について</a></li>
+      <li><a href="#menu">メニュー</a></li>
+      <li><a href="#voice">お客様の声</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#contact">ご予約</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    © 2026 整体院〜健勝〜 All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+// Progress bar
+const progressBar = document.getElementById('progressBar');
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+}
+
+// Nav active links
+const sections = ['hero','about','menu','voice','flow','access','contact'];
+const navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+
+function updateNav() {
+  let current = 'hero';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.nav === current);
+  });
+}
+
+window.addEventListener('scroll', () => {
+  updateProgress();
+  updateNav();
+}, { passive: true });
+
+updateProgress();
+updateNav();
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
